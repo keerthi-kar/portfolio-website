@@ -168,7 +168,7 @@ h2 {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
     text-align: justify;
 
-    font-size: 15px;
+    font-size: 14px;
     margin: 10px;
 
     object-fit: cover;
@@ -297,5 +297,10 @@ footer {
         max-width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
+        height: 350px;
     }
+    .box{
+        font-size: 12px;
+    }
+
 }
