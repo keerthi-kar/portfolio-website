@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 30px;
+    position: sticky;
+    width: 100%;
+
+    z-index: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+}
+
+.h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #000;
+}
+
+label {
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+#toggle {
+    display: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: orange;
+    left: 0px;
+    bottom: -3px;
+    transition-duration: 0.5s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    color: #757272;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.image {
+    background-image: url(system.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+
+}
+
+.content {
+    padding: 80px 40px;
+
+    max-width: 1000px;
+    margin: auto;
+}
+
+#home h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+#home p {
+    font-size: 22px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+}
+
+#about {
+    padding: 80px 40px;
+    font-size: 20px;
+    max-width: 1000px;
+    text-align: justify;
+    margin: auto;
+}
+
+#skills ul li {
+    margin: 10px;
+    font-size: 20px;
+    background-color: #d8e0e7;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #ff6600;
+    margin-bottom: 5px;
+}
+
+#skills {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    gap: 20px;
+}
+
+#project {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.box {
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+
+    font-size: 15px;
+    margin: 10px;
+
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    transition: 0.2s ease-in-out;
+}
+
+.box img {
+    width: 500px;
+    height: 350px;
+}
+
+.box p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.box h3 {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(57, 57, 163);
+}
+
+.box a {
+    text-decoration: none;
+
+}
+
+.box:hover {
+    color: #757272;
+    transition: 0.2s ease-in-out;
+
+    transform: scale(1.04);
+}
+
+#resume {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+button:hover {
+    color: #444;
+}
+
+#contact {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 20px;
+
+}
+
+#contact p {
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    /* spacing from above section */
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+    }
+
+    label {
+        display: block;
+    }
+
+    span {
+        font-size: 41px;
+    }
+
+    .content {
+        padding-top: 200px;
+        padding-left: 18px;
+    }
+
+    .menu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .menu a {
+        border-top: 1px solid #EAEAEB;
+        padding: 10px 0;
+    }
+
+    #toggle:checked+.menu {
+        display: flex;
+    }
+}
+@media (max-width:768px){
+    img{
+        max-width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
